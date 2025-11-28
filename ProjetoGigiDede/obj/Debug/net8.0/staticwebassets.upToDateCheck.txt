@@ -1,3 +1,4 @@
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\img\card-comidas.png
 wwwroot\img\card-forno.png
@@ -6,7 +7,7 @@ wwwroot\img\icons8-google-maps-100.png
 wwwroot\img\icons8-instagram-logo-100.png
 wwwroot\img\icons8-whatsapp-100.png
 wwwroot\img\logosem.png
-wwwroot\img\LogoTipoEscrita (3).png
+wwwroot\js\script.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -65,4 +66,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\site.css
+wwwroot\css\style.css

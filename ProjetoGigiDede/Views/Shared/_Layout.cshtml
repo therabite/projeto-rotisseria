@@ -1,25 +1,80 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br   ">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProjetoGigiDede</title>
+    <title>@ViewData["Title"] - Le Rotisserie</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoGigiDede.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
 <body>
+    <button id="hamburgerBtn" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Side nav escondida -->
+    <nav id="sideNav" class="side-nav" aria-hidden="true">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" tabindex="-1"></div>
+
+    <!-- Top bar (logo e ícones) -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="left"></div>
+
+            <!-- logo como imagem -->
+            <a class="logo" href="/" aria-label="Le Rotisserie - Início">
+                <img src="~/img/logosem.png" alt="Logo Le Rotisserie">
+            </a>
+
+            <div class="icons">
+                <a href="#" aria-label="WhatsApp" class="icon">
+                    <img src="~/img/icons8-google-maps-100.png" alt="WhatsApp">
+                </a>
+                <a href="#" aria-label="Localização" class="icon">
+                    <img src="~/img/icons8-instagram-logo-100.png" alt="Localização">
+                </a>
+                <a href="#" aria-label="Instagram" class="icon">
+                    <img src="~/img/icons8-whatsapp-100.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - ProjetoGigiDede - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">Le Rotisserie</div>
+            <div class="footer-right">
+                <a href="#" class="small-icon" aria-label="WhatsApp">
+                    <img src="~/img/icons8-google-maps-100.png" alt="WhatsApp">
+                </a>
+                <a href="#" class="small-icon" aria-label="Localização">
+                    <img src="~/img/icons8-instagram-logo-100.png" alt="Localização">
+                </a>
+                <a href="#" class="small-icon" aria-label="Instagram">
+                    <img src="~/img/icons8-whatsapp-100.png" alt="Instagram">
+                </a>
+            </div>
         </div>
     </footer>
+    <script src="~/js/script.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
