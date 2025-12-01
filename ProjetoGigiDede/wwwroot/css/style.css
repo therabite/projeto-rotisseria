@@ -3,9 +3,9 @@
     src: url("../fonts/MinhaFonte.ttf") format("truetype");
 }
 :root {
-    --brown-1: #b87360;
-    --brown-2: #7a3527; 
-    --paper: #e9dccd;
+    --brown-1: #BE7857;
+    --brown-2: #913F1C;
+    --paper: #DDC8B0;
     --accent: #c79a84;
     --text-dark: #2b1b16;
     --max-width: 1200px;
@@ -22,13 +22,6 @@ body {
     background: var(--paper);
     color: var(--text-dark);
     line-height: 1.45;
-}
-
-/* Container centralizado */
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
 }
 
 /* --- Topbar --- */
@@ -55,13 +48,13 @@ body {
     height: 72px;
 }
 
-    .logo img {
-        margin-left: 70px;
-        margin-top: 22px;
-        height: 250px; /* ajuste conforme necessário */
-        width: auto;
-        display: block;
-    }
+.logo img {
+    margin-left: 70px;
+    margin-top: 22px;
+    height: 250px; /* ajuste conforme necessário */
+    width: auto;
+    display: block;
+}
 
 /* Icons no header */
 .icons {
@@ -115,167 +108,6 @@ body {
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
-
-/* --- Hamburger --- */
-.hamburger {
-    position: fixed;
-    top: 18px;
-    left: 18px;
-    width: 44px;
-    height: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 6px;
-    z-index: 110;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-    .hamburger span {
-        display: block;
-        height: 3px;
-        background: #fff;
-        border-radius: 3px;
-        transition: transform 220ms ease, opacity 200ms ease;
-    }
-
-/* --- Side Nav (oculto por padrão) --- */
-.side-nav {
-    position: fixed;
-    top: 0;
-    left: -320px;
-    width: 280px;
-    height: 100%;
-    background: #fff;
-    box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-    padding: 72px 20px;
-    transition: left 280ms ease;
-    z-index: 105;
-    font-weight: 600;
-}
-
-    .side-nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .side-nav a {
-        color: var(--text-dark);
-        text-decoration: none;
-        padding: 8px 6px;
-        display: inline-block;
-        border-radius: 6px;
-    }
-
-        .side-nav a:hover {
-            background: rgba(0,0,0,0.04);
-        }
-
-/* overlay */
-.overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.42);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 220ms ease, visibility 220ms;
-    z-index: 102;
-}
-
-/* quando aberto */
-.nav-open .side-nav {
-    left: 0;
-}
-
-.nav-open .overlay {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* transform hamburger em X */
-.nav-open .hamburger span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.nav-open .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-open .hamburger span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-}
-.hero {
-    background: var(--brown-2);
-    color: #fff;
-    padding: 40px 0 24px;
-}
-
-.hero-inner {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-    padding: 30px 0;
-}
-
-.hero-text {
-    width: 48%;
-    padding-right: 12px;
-}
-    
-.hero-text h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 64px;
-    margin-bottom: 12px;
-    margin-left: 30vh;
-    font-weight: 70;
-    color: #fff;
-    align-items: center;
-}
-
-    .hero-text p {
-        color: rgba(255,255,255,0.92);
-        text-align: justify;
-        font-size: 22px;
-        margin-left: 3opx;
-    }
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-    .hero-image img {
-        max-width: 420px;
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-    }
-
-/* --- Brand Title grande --- */
-.brand-title {
-    padding: 18px 0;
-    background: transparent;
-}
-
-    .brand-title h2 {
-        font-family: "Playfair Display", serif;
-        color: rgba(255,255,255,0.95);
-        font-size: 88px;
-        letter-spacing: 4px;
-        margin-top: -14px;
-        color: #efe7df;
-        text-shadow: 0 3px 0 rgba(0,0,0,0.06);
-        border-bottom: 2px solid rgba(255,255,255,0.12);
-        padding-bottom: 6px;
-    }
-
 /* --- Gallery --- */
 .gallery {
     padding: 40px 0 80px;
@@ -319,14 +151,8 @@ border-radius: 4px;
     font-family: "Playfair Display", serif;
     font-size: 16px;
     opacity: 0.95;
+    position: relative;
 }
-.footer-logo {
-    height: 5%;
-    display: flex;
-    opacity: 0.95;
-    margin-left: -8px;
-}
-
 .small-icon {
     display: inline-flex;
     width: 30px;
