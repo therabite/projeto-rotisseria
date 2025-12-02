@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br   ">
+<html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,26 +8,61 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoGigiDede.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <style>
+        /* Forçar hamburger visível e acima do header */
+        .hamburger {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            width: 44px;
+            height: 36px;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 6px;
+            z-index: 9999 !important;
+            /* garante cima de tudo */
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            background: #fff;
+            border-radius: 3px;
+            transition: transform 220ms ease, opacity 200ms ease;
+        }
+    </style>
 </head>
+
 <body>
-    <button id="hamburgerBtn" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+    <!-- Hamburger -->
+    <button id="hamburgerBtn" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideNav">
         <span></span><span></span><span></span>
     </button>
 
-    <!-- Side nav escondida -->
-    <nav id="sideNav" class="side-nav" aria-hidden="true">
-        <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#cardapio">Cardápio</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contato">Contato</a></li>
+    <!-- Side nav -->
+    <nav id="sideNav" class="side-nav" aria-hidden="true" aria-labelledby="sideNavTitle" role="navigation">
+        <div class="side-header">
+            <h2 id="sideNavTitle">navegue conosco</h2>
+        </div>
+        <ul class="side-list">
+            <li><a class="a-color" asp-controller="Home" asp-action="Index">home</a></li>
+            <li><a class="a-color" href="#cardapio">Cardápio</a></li>
+            <li><a class="a-color" href="#avaliacao">Avaliações</a></li>
+            <li><a class="a-color" href="#galeria">Galeria</a></li>
+            <li><a class="a-color"href="#contato">Contato</a></li>
+            <li class="auth">
+                <a asp-controller="Home" asp-action="Login">Cadastrar</a> / <a asp-controller="Home" asp-action="Cadastro">Login</a>
+            </li>
         </ul>
     </nav>
 
     <!-- Overlay -->
-    <div id="overlay" class="overlay" tabindex="-1"></div>
+    <div id="overlay" class="overlay" tabindex="-1" aria-hidden="true"></div>
 
     <!-- Top bar (logo e ícones) -->
     <header class="topbar">
@@ -77,10 +113,97 @@
             </div>
         </div>
     </footer>
-    <script src="~/js/script.js"></script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        // Lógica inline: abre/fecha nav ao clicar no botão; fecha ao clicar fora/overlay; fecha com Esc
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.querySelector('.hamburguer, .hamburger, #hamburgerBtn');
+            const nav = document.getElementById('sideNav');
+            let overlay = document.getElementById('overlay');
+            const body = document.body;
+            const OPEN_CLASS = 'nav-open';
+
+            if (!btn || !nav) return;
+
+            // garante overlay se por acaso removido
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'overlay';
+                overlay.className = 'overlay';
+                overlay.tabIndex = -1;
+                overlay.setAttribute('aria-hidden', 'true');
+                nav.parentNode.insertBefore(overlay, nav.nextSibling);
+            }
+
+            function setAria(opened) {
+                btn.setAttribute('aria-expanded', String(!!opened));
+                nav.setAttribute('aria-hidden', String(!opened));
+                overlay.setAttribute('aria-hidden', String(!opened));
+            }
+
+            function openNav() {
+                if (!body.classList.contains(OPEN_CLASS)) {
+                    body.classList.add(OPEN_CLASS);
+                    setAria(true);
+                    body.style.overflow = 'hidden';
+                    // foco no primeiro link
+                    const first = nav.querySelector('a');
+                    if (first) first.focus();
+                }
+            }
+
+            function closeNav() {
+                if (body.classList.contains(OPEN_CLASS)) {
+                    body.classList.remove(OPEN_CLASS);
+                    setAria(false);
+                    body.style.overflow = '';
+                    btn.focus();
+                }
+            }
+
+            function toggleNav(e) {
+                if (e) e.stopPropagation();
+                if (body.classList.contains(OPEN_CLASS)) closeNav(); else openNav();
+            }
+
+            // clique no botão
+            btn.addEventListener('click', toggleNav);
+
+            // clique no overlay fecha
+            overlay.addEventListener('click', function (e) {
+                e.stopPropagation();
+                closeNav();
+            });
+
+            // clique fora do nav e do botão fecha (fallback)
+            document.addEventListener('click', function (e) {
+                if (!body.classList.contains(OPEN_CLASS)) return;
+                if (!nav.contains(e.target) && !btn.contains(e.target)) closeNav();
+            });
+
+            // Esc fecha
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeNav();
+            });
+
+            // fechar ao clicar em link do menu
+            Array.from(nav.querySelectorAll('a')).forEach(function (a) {
+                a.addEventListener('click', function () {
+                    closeNav();
+                });
+            });
+
+            // estado ARIA inicial
+            if (!btn.hasAttribute('aria-expanded')) btn.setAttribute('aria-expanded', 'false');
+            if (!nav.hasAttribute('aria-hidden')) nav.setAttribute('aria-hidden', 'true');
+            if (!overlay.hasAttribute('aria-hidden')) overlay.setAttribute('aria-hidden', 'true');
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

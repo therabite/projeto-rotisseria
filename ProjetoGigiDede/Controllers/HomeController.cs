@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using AspNetCoreGeneratedDocument;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoGigiDede.Models;
 
@@ -20,6 +21,15 @@ namespace ProjetoGigiDede.Controllers
             home.email = "dede@gmail.com";
 
             return View(home);
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

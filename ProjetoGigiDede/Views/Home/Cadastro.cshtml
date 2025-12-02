@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Cadastro";
+}
+<link rel="stylesheet" type="text/css" href="~/css/login.css" />
+
+<main class="hero auth-hero" id="home">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1>Bem-vindo de volta</h1>
+            <p>
+                Acesse sua conta para acompanhar pedidos, facilitar pagamentos e ter acesso a ofertas exclusivas.
+            </p>
+            <p class="muted">Novo por aqui? <a href="register.html" class="link-accent">Crie sua conta</a></p>
+        </div>
+
+        <div class="auth-card-wrap">
+            <form id="loginForm" class="auth-card" autocomplete="on" novalidate>
+                <h2 class="card-title">Entrar</h2>
+
+                <label class="field">
+                    <span class="label-text">Email</span>
+                    <input type="email" name="email" placeholder="seu@email.com" required>
+                </label>
+
+                <label class="field">
+                    <span class="label-text">Senha</span>
+                    <input type="password" name="password" placeholder="••••••••" required minlength="6">
+                </label>
+
+                <div class="form-actions">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember"> Lembrar-me
+                    </label>
+                    <a class="link-muted forgot" href="#">Esqueceu a senha?</a>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <a href="register.html" class="btn btn-outline">Cadastrar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Simple demo validation
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = this.email.value.trim();
+        const pwd = this.password.value.trim();
+        if (!email || !pwd) { alert('Preencha email e senha.'); return; }
+        alert('Login demo: ' + email);
+        // TODO: call your auth API
+    });
+</script>
+

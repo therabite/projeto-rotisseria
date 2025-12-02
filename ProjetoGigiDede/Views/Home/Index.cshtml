@@ -1,16 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-<link rel="stylesheet" type="text/css" href="~/css/style.css" />
+<link rel="stylesheet"  href="~/css/style.css" />
 
 <section class="hero" id="home">
     <div class="container hero-inner">
         <div class="hero-text">
-            <h1>Título</h1>
+            <h1>Seja Bem-Vindo</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur.
+                Aqui na nossa rotisseria você encontra pratos deliciosos, preparados com ingredientes frescos e de alta qualidade. Nosso cardápio oferece uma variedade de opções para todos os gostos, desde entradas saborosas até pratos principais irresistíveis. Venha nos visitar e desfrute de uma experiência gastronômica única!
             </p>
         </div>
         <div class="hero-image">
@@ -37,4 +35,30 @@
         <figure><img src="~/img/card-forno.png" alt="Forno à lenha"></figure>
     </div>
 </section>
+
+<!-- Seção Localização-->
+<section class="location" id="localizacao">
+    <div class="container location-inner">
+        <div class="location-info">
+            <p><strong>Endereço:</strong> Rua Comidinha, 123 — Jardins, São Paulo - SP</p>
+            <p><strong>Telefone:</strong> (11) 99999-9999</p>
+            <p><strong>Horário:</strong> Segunda a Domingo — 11:00 às 23:00</p>
+
+            <a href="https://www.google.com/maps" target="_blank" class="btn btn-outline btn-small">Abrir no Google Maps</a>
+        </div>
+
+        <div class="location-map" aria-label="Mapa de localização">
+            <!-- Substitua o src pelo embed do seu local no Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.648677665451!2d-46.65776448495449!3d-23.58093726896415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b266e3a4d1%3A0x1cf9f6a33f1f8afa!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-000!5e0!3m2!1spt-BR!2sbr!4v1692848040123!5m2!1spt-BR!2sbr"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
 

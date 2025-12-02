@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Cadastro";
+}
+<link rel="stylesheet" type="text/css" href="~/css/login.css" />
+
+    <main class="hero auth-hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Criar conta</h1>
+                <p>
+                    Junte-se a nós e aproveite benefícios exclusivos, pedidos rápidos e promoções especiais.
+                </p>
+                <p class="muted">Já tem conta? <a href="login.html" class="link-accent">Entrar</a></p>
+            </div>
+
+            <div class="auth-card-wrap">
+                <form id="registerForm" class="auth-card" autocomplete="on" novalidate>
+                    <h2 class="card-title">Cadastre-se</h2>
+
+                    <label class="field">
+                        <span class="label-text">Nome</span>
+                        <input type="text" name="name" placeholder="Seu nome completo" required>
+                    </label>
+
+                    <label class="field">
+                        <span class="label-text">Email</span>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </label>
+
+                    <label class="field">
+                        <span class="label-text">Senha</span>
+                        <input type="password" name="password" placeholder="Crie uma senha" required minlength="6">
+                    </label>
+
+                    <label class="field">
+                        <span class="label-text">Confirmar senha</span>
+                        <input type="password" name="confirmPassword" placeholder="Repita a senha" required minlength="6">
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <a href="login.html" class="btn btn-outline">Entrar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Simple demo validation
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const pwd = this.password.value.trim();
+            const confirm = this.confirmPassword.value.trim();
+            if (!name || !email || !pwd || !confirm) { alert('Preencha todos os campos.'); return; }
+            if (pwd !== confirm) { alert('As senhas não conferem.'); return; }
+            alert('Cadastro demo: ' + email);
+            // TODO: call your register API
+        });
+    </script>
+

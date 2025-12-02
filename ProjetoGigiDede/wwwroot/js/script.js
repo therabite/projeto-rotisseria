@@ -1,53 +1,74 @@
-﻿class MobileNavbar {
-    constructor(menuSelector, navListSelector, navLinksSelector) {
-        this.menu = document.querySelector(menuSelector);
-        this.navList = document.querySelector(navListSelector);
-        this.navLinks = document.querySelectorAll(navLinksSelector);
-        this.overlay = document.querySelector('#overlay');
-        this.activeClass = "active";
+﻿/*document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.hamburguer') || document.querySelector('.hamburger') || document.getElementById('hamburgerBtn');
+    const nav = document.querySelector('#sideNav') || document.querySelector('.side-nav');
+    const overlay = document.querySelector('#overlay');
+    const body = document.body;
+    const OPEN_CLASS = 'nav-open';
 
-        this.handleClick = this.handleClick.bind(this);
-        this.handleKeyDown = this.handleKeyDown.bind(this);
-    }
+    if (!btn || !nav) return;
 
-    handleClick() {
-        const expanded = this.menu.getAttribute('aria-expanded') === 'true';
-        // toggle ARIA
-        this.menu.setAttribute('aria-expanded', String(!expanded));
-        this.navList.setAttribute('aria-hidden', String(expanded));
-        // toggle classes
-        this.navList.classList.toggle(this.activeClass);
-        this.menu.classList.toggle('open'); // opcional: animação do hamburger
-        if (this.overlay) this.overlay.classList.toggle('visible');
-    }
-
-    handleKeyDown(e) {
-        if (e.key === 'Escape') {
-            const expanded = this.menu.getAttribute('aria-expanded') === 'true';
-            if (expanded) this.handleClick();
+    function openNav() {
+        if (!body.classList.contains(OPEN_CLASS)) {
+            body.classList.add(OPEN_CLASS);
+            btn.setAttribute('aria-expanded', 'true');
+            nav.setAttribute('aria-hidden', 'false');
+            if (overlay) overlay.setAttribute('aria-hidden', 'false');
+            // opcional: bloquear scroll
+            body.style.overflow = 'hidden';
         }
     }
 
-    addClickEvent() {
-        if (this.menu) this.menu.addEventListener("click", this.handleClick);
-        if (this.overlay) this.overlay.addEventListener("click", this.handleClick);
-        this.navLinks.forEach(link => link.addEventListener("click", this.handleClick));
-        document.addEventListener("keydown", this.handleKeyDown);
+    function closeNav() {
+        if (body.classList.contains(OPEN_CLASS)) {
+            body.classList.remove(OPEN_CLASS);
+            btn.setAttribute('aria-expanded', 'false');
+            nav.setAttribute('aria-hidden', 'true');
+            if (overlay) overlay.setAttribute('aria-hidden', 'true');
+            body.style.overflow = '';
+            btn.focus();
+        }
     }
 
-    init() {
-        if (!this.menu || !this.navList) return this;
-        // estado inicial ARIA
-        if (!this.menu.hasAttribute("aria-expanded")) this.menu.setAttribute("aria-expanded", "false");
-        if (!this.navList.hasAttribute("aria-hidden")) this.navList.setAttribute("aria-hidden", "true");
-        this.addClickEvent();
-        return this;
+    function toggleNav() {
+        body.classList.contains(OPEN_CLASS) ? closeNav() : openNav();
     }
-}
 
-const mobileNavbar = new MobileNavbar(
-    "#hamburgerBtn",
-    "#sideNav",
-    "#sideNav li"
-);
-mobileNavbar.init();
+    // clique no botão
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleNav();
+    });
+
+    // clique no overlay (se existir) fecha
+    if (overlay) {
+        overlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeNav();
+        });
+    }
+
+    // fallback: clique fora do nav e do botão fecha o menu
+    document.addEventListener('click', (e) => {
+        if (!body.classList.contains(OPEN_CLASS)) return;
+        const path = e.composedPath ? e.composedPath() : (e.path || []);
+        // verifica se o clique foi dentro do nav ou dentro do botão
+        const clickedInsideNav = nav.contains(e.target) || path.includes(nav);
+        const clickedOnBtn = btn.contains(e.target) || path.includes(btn);
+        if (!clickedInsideNav && !clickedOnBtn) closeNav();
+    });
+
+    // fecha com Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeNav();
+    });
+
+    // fecha ao clicar em link do menu
+    Array.from(nav.querySelectorAll('a')).forEach(a => {
+        a.addEventListener('click', () => closeNav());
+    });
+
+    // estado ARIA inicial
+    if (!btn.hasAttribute('aria-expanded')) btn.setAttribute('aria-expanded', 'false');
+    if (!nav.hasAttribute('aria-hidden')) nav.setAttribute('aria-hidden', 'true');
+    if (overlay && !overlay.hasAttribute('aria-hidden')) overlay.setAttribute('aria-hidden', 'true');
+}); */
