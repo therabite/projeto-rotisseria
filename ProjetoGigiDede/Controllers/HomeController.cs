@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using AspNetCoreGeneratedDocument;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoGigiDede.Models;
 
@@ -7,20 +6,10 @@ namespace ProjetoGigiDede.Controllers
 {
     public class HomeController : Controller
     {
-
+        
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            homeModel home = new homeModel ();
-
-            home.nome = "Dedé";
-            home.email = "dede@gmail.com";
-
-            return View(home);
         }
 
         public IActionResult Cadastro()

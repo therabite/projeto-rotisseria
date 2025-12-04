@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\wwwroot\\css\\login.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\wwwroot\\css\\login.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\desktop\\ds\\projetogigidede\\projetogigidede\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +14,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAC4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T00:06:03.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAHgBAAAAAAAAAAAwwN4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-01T23:54:32.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-01T23:15:39.073Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "login.css",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-01T23:17:13.636Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\appsettings.json",
+              "RelativeToolTip": "ProjetoGigiDede\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-04T02:54:15.693Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cadastro.cshtml",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\Ds\\ProjetoGigiDede\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwCoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-01T23:11:04.133Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
