@@ -1,9 +1,4 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
+﻿:root {
     --brown-1: #BE7857;
     --brown-2: #913F1C;
     --paper: #DDC8B0;
@@ -19,9 +14,14 @@
     margin: 0;
     padding: 0
 }
-
+.platypi-<uniquifier>{
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: "Platypi", serif;
     background: var(--paper);
     color: var(--text-dark);
     -webkit-font-smoothing: antialiased;
@@ -52,7 +52,8 @@ body {
 }
 
     .hero-text h1 {
-        font-family: "Playfair Display", serif;
+        font-family: "Platypi", serif;
+        italic: 1;
         font-size: 42px;
         margin-bottom: 10px;
     }

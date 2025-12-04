@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoGigiDede.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <style>
         /* Forçar hamburger visível e acima do header */
         .hamburger {
@@ -50,13 +53,13 @@
             <h2 id="sideNavTitle">navegue conosco</h2>
         </div>
         <ul class="side-list">
-            <li><a class="a-color" asp-controller="Home" asp-action="Index">home</a></li>
+            <li><a class="a-color" asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a class="a-color" href="#cardapio">Cardápio</a></li>
             <li><a class="a-color" href="#avaliacao">Avaliações</a></li>
             <li><a class="a-color" href="#galeria">Galeria</a></li>
             <li><a class="a-color"href="#contato">Contato</a></li>
             <li class="auth">
-                <a asp-controller="Home" asp-action="Login">Cadastrar</a> / <a asp-controller="Home" asp-action="Cadastro">Login</a>
+                <a asp-controller="Home" asp-action="Cadastro">Cadastrar</a> / <a asp-controller="Home" asp-action="Login">Login</a>
             </li>
         </ul>
     </nav>

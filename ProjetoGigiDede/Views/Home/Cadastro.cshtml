@@ -1,79 +1,111 @@
-﻿@{
+﻿@model ProjetoGigiDede.Models.Usuario;
+    
+@{
     ViewData["Title"] = "Cadastro";
 }
 <link rel="stylesheet" type="text/css" href="~/css/login.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-<main class="hero auth-hero" id="home">
-    <div class="container hero-inner">
-        <div class="hero-text">
-            <h1>Bem-vindo de volta</h1>
-            <p>
-                Acesse sua conta para acompanhar pedidos, facilitar pagamentos e ter acesso a ofertas exclusivas.
-            </p>
-            <p class="muted">Novo por aqui? <a href="register.html" class="link-accent">Crie sua conta</a></p>
-        </div>
-
-        <div class="auth-card-wrap">
-            <form id="loginForm" class="auth-card" autocomplete="on" novalidate>
-                <h2 class="card-title">Entrar</h2>
-
-                <label class="field">
-                    <span class="label-text">Email</span>
-                    <input type="email" name="email" placeholder="seu@email.com" required>
-                </label>
-
-                <label class="field">
-                    <span class="label-text">Senha</span>
-                    <input type="password" name="password" placeholder="••••••••" required minlength="6">
-                </label>
-
-                <div class="form-actions">
-                    <label class="checkbox">
-                        <input type="checkbox" name="remember"> Lembrar-me
-                    </label>
-                    <a class="link-muted forgot" href="#">Esqueceu a senha?</a>
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                    <button type="reset" class="btn btn-primary">Limpar</button>
-                    <a href="register.html" class="btn btn-outline">Cadastrar</a>
-                </div>
-            </form>
-        </div>
+<main class="hero auth-hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Criar conta</h1>
+      <p>Junte-se a nós e aproveite benefícios exclusivos, pedidos rápidos e promoções especiais.</p>
+            <p class="muted">Já tem conta? <a asp-action="Login" class="link-accent">Entrar</a></p>
     </div>
+
+    <div class="auth-card-wrap">
+      <form asp-controller="Usuario" asp-action="Cadastro" method="post" id="registerForm" class="auth-card" autocomplete="on" novalidate>
+        @Html.AntiForgeryToken()
+
+        <h2 class="card-title">Conecte-se</h2>
+
+        <label class="field">
+          <span class="label-text">Nome</span>
+          <input asp-for="nome" class="form-control" type="text" name="nome" placeholder="Seu nome completo" required>
+          <span asp-validation-for="nome" class="text-danger"></span>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Email</span>
+          <input asp-for="email" class="form-control" type="email" name="email" placeholder="seu@email.com" required>
+          <span asp-validation-for="email" class="text-danger"></span>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Senha</span>
+          <input asp-for="senha" class="form-control" type="password" name="senha" placeholder="Crie uma senha" required minlength="6">
+          <span asp-validation-for="senha" class="text-danger"></span>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Confirmar senha</span>
+          <input asp-for="ConfirmPassword" class="form-control" type="password" name="ConfirmPassword" placeholder="Repita a senha" required minlength="6">
+          <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="reset" class="btn btn-primary">Limpar</button>
+          <a href="login.html" class="btn btn-outline">Entrar</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </main>
 
-<script>
-    // Simple demo validation
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+
+  <script>
+    (function () {
+      const form = document.getElementById('registerForm');
+
+      form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const email = this.email.value.trim();
-        const pwd = this.password.value.trim();
-        if (!email || !pwd) { alert('Preencha email e senha.'); return; }
-        alert('Login demo: ' + email);
-        // TODO: call your auth API
-    loginForm.addEventListener('reset', function (e) {
-        // O evento 'reset' é disparado antes dos valores serem restaurados ao padrão,
-        // então usamos setTimeout para executar após o reset nativo ser aplicado.
-        setTimeout(() => {
-            // Limpa mensagens de validação customizadas (se existirem)
-            const validationMessages = loginForm.querySelectorAll('.text-danger, .error');
-            validationMessages.forEach(node => node.textContent = '');
 
-            // Remove classes de erro em campos (se seu CSS usar)
-            const errorFields = loginForm.querySelectorAll('.is-invalid, .input-error');
-            errorFields.forEach(f => f.classList.remove('is-invalid', 'input-error'));
+        // validação simples cliente
+        const nome = form.querySelector('input[name="nome"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const senha = form.querySelector('input[name="senha"]').value;
+        const confirm = form.querySelector('input[name="ConfirmPassword"]').value;
+        if (!nome || !email || !senha || !confirm) {
+          alert('Preencha todos os campos.');
+          return;
+        }
+        if (senha !== confirm) {
+          alert('As senhas não conferem.');
+          return;
+        }
 
-            // Opcional: limpar armazenamento local relacionado ao formulário (ex.: lembrar-me)
-            try {
-                localStorage.removeItem('login_remember_email');
-            } catch (err) { /* ignore */ }
+        // forma de envio: FormData preserva o token antifalsificação gerado por @Html.AntiForgeryToken()
+        const formData = new FormData(form);
 
-            // Foca o primeiro campo (email) após limpar
-            const firstField = loginForm.querySelector('input[name="email"]');
-            if (firstField) firstField.focus();
-        }, 0);
-    });
-</script>
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            credentials: 'same-origin' // importante para cookie de autenticação/antiforgery
+          });
+
+          if (response.ok) {
+            // sucesso: redireciona ou mostra mensagem
+            // se controller fizer Redirect, fetch não navega automaticamente, então força reload/redirect
+            window.location.href = '/'; // ajustar conforme rota desejada
+          } else {
+            // tenta extrair mensagem de erro retornada pela view
+            const text = await response.text();
+            alert('Erro ao cadastrar. Verifique os dados e tente novamente.');
+            console.error('Resposta do servidor:', text);
+          }
+        } catch (err) {
+          console.error(err);
+          alert('Erro na requisição. Veja console para detalhes.');
+        }
+      });
+    })();
+  </script>
+}
 

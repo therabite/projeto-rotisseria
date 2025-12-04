@@ -1,84 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Logar";
 }
 <link rel="stylesheet" type="text/css" href="~/css/login.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <main class="hero auth-hero">
-        <div class="container hero-inner">
-            <div class="hero-text">
-                <h1>Criar conta</h1>
-                <p>
-                    Junte-se a nós e aproveite benefícios exclusivos, pedidos rápidos e promoções especiais.
-                </p>
-                <p class="muted">Já tem conta? <a href="login.html" class="link-accent">Entrar</a></p>
-            </div>
-
-            <div class="auth-card-wrap">
-                <form id="registerForm" class="auth-card" autocomplete="on" novalidate>
-                    <h2 class="card-title">Conecte-se</h2>
-
-                    <label class="field">
-                        <span class="label-text">Nome</span>
-                        <input type="text" name="name" placeholder="Seu nome completo" required>
-                    </label>
-
-                    <label class="field">
-                        <span class="label-text">Email</span>
-                        <input type="email" name="email" placeholder="seu@email.com" required>
-                    </label>
-
-                    <label class="field">
-                        <span class="label-text">Senha</span>
-                        <input type="password" name="password" placeholder="Crie uma senha" required minlength="6">
-                    </label>
-
-                    <label class="field">
-                        <span class="label-text">Confirmar senha</span>
-                        <input type="password" name="confirmPassword" placeholder="Repita a senha" required minlength="6">
-                    </label>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-primary">Limpar</button>
-                        <a href="login.html" class="btn btn-outline">Entrar</a>
-                    </div>
-                </form>
-            </div>
+<main class="hero auth-hero" id="home">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1>Bem-vindo de volta</h1>
+            <p>
+                Acesse sua conta para acompanhar pedidos, facilitar pagamentos e ter acesso a ofertas exclusivas.
+            </p>
+            <p class="muted">Novo por aqui? <a asp-action ="Cadastro" class="link-accent">Crie sua conta</a></p>
         </div>
-    </main>
+
+        <div class="auth-card-wrap">
+            <form asp-controller="Usuario" asp-action="Login" method="post" id="loginForm" class="auth-card" autocomplete="on" novalidate>
+                @Html.AntiForgeryToken()
+
+                <h2 class="card-title">Entrar</h2>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @if (TempData["Mensagem"] != null) {
+                    <div class="text-success">@TempData["Mensagem"]</div>
+                }
+
+                <label class="field">
+                    <span class="label-text">Email</span>
+                    <input type="email" name="email" placeholder="seu@email.com" required>
+                </label>
+
+                <label class="field">
+                    <span class="label-text">Senha</span>
+                    <input type="password" name="password" placeholder="••••••••" required minlength="6">
+                </label>
+
+                <div class="form-actions">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember"> Lembrar-me
+                    </label>
+                    <a class="link-muted forgot" href="#">Esqueceu a senha?</a>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="reset" class="btn btn-primary">Limpar</button>
+                    <a href="/Home/Cadastro" class="btn btn-outline">Cadastrar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
     <script>
-        // Simple demo validation
-        document.getElementById('registerForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = this.name.value.trim();
-            const email = this.email.value.trim();
-            const pwd = this.password.value.trim();
-            const confirm = this.confirmPassword.value.trim();
-            if (!name || !email || !pwd || !confirm) { alert('Preencha todos os campos.'); return; }
-            if (pwd !== confirm) { alert('As senhas não conferem.'); return; }
-            alert('Cadastro demo: ' + email);
-            // TODO: call your register API
-        loginForm.addEventListener('reset', function (e) {
-    // O evento 'reset' é disparado antes dos valores serem restaurados ao padrão,
-    // então usamos setTimeout para executar após o reset nativo ser aplicado.
-    setTimeout(() => {
-        // Limpa mensagens de validação customizadas (se existirem)
-        const validationMessages = loginForm.querySelectorAll('.text-danger, .error');
-        validationMessages.forEach(node => node.textContent = '');
+        (function () {
+            const loginForm = document.getElementById('loginForm');
 
-        // Remove classes de erro em campos (se seu CSS usar)
-        const errorFields = loginForm.querySelectorAll('.is-invalid, .input-error');
-        errorFields.forEach(f => f.classList.remove('is-invalid', 'input-error'));
+            // validação simples no cliente antes do submit
+            loginForm.addEventListener('submit', function (e) {
+                const email = this.email.value.trim();
+                const pwd = this.password.value.trim();
+                if (!email || !pwd) {
+                    e.preventDefault();
+                    alert('Preencha email e senha.');
+                }
+            });
 
-        // Opcional: limpar armazenamento local relacionado ao formulário (ex.: lembrar-me)
-        try {
-            localStorage.removeItem('login_remember_email');
-        } catch (err) { /* ignore */ }
-
-        // Foca o primeiro campo (email) após limpar
-        const firstField = loginForm.querySelector('input[name="email"]');
-        if (firstField) firstField.focus();
-    }, 0);
-        });
+            // tratamento do botão reset (após reset aplicado)
+            loginForm.addEventListener('reset', function (e) {
+                setTimeout(() => {
+                    // remove possíveis mensagens visuais personalizadas
+                    const validationMessages = loginForm.querySelectorAll('.text-danger, .error');
+                    validationMessages.forEach(node => node.textContent = '');
+                    const errorFields = loginForm.querySelectorAll('.is-invalid, .input-error');
+                    errorFields.forEach(f => f.classList.remove('is-invalid', 'input-error'));
+                    const firstField = loginForm.querySelector('input[name="email"]');
+                    if (firstField) firstField.focus();
+                }, 0);
+            });
+        })();
     </script>
+}
 

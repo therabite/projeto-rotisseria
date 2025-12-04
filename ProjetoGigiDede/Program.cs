@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation; // Adiciona o namespace necessário
 using ProjetoGigiDede.Data;
 
 namespace ProjetoGigiDede
@@ -8,7 +13,9 @@ namespace ProjetoGigiDede
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            var mvcBuilder = builder.Services.AddControllersWithViews();
+            mvcBuilder.AddRazorRuntimeCompilation(); // Corrige o uso do método de extensão
+
             var connectionString = builder.Configuration.GetConnectionString("MySqlConn");
 
             builder.Services.AddDbContext<AppDbContext>(options =>

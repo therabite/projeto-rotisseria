@@ -1,6 +1,5 @@
 wwwroot\css\login.css
 wwwroot\css\site.css
-wwwroot\css\style.css
 wwwroot\favicon.ico
 wwwroot\img\card-comidas.png
 wwwroot\img\card-forno.png
@@ -70,3 +69,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\style.css

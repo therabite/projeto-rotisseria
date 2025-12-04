@@ -1,6 +1,6 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoGigiDede.Models;
+using System.Diagnostics;
 
 namespace ProjetoGigiDede.Controllers
 {
@@ -11,12 +11,11 @@ namespace ProjetoGigiDede.Controllers
         {
             return View();
         }
-
-        public IActionResult Cadastro()
+        public IActionResult Login()
         {
             return View();
         }
-        public IActionResult Login()
+        public IActionResult Cadastro()
         {
             return View();
         }

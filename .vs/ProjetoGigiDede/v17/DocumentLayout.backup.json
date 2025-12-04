@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\",
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\2ds\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\2ds\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\2ds\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\2ds\\source\\repos\\projeto-rotisseria\\projetogigidede\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\2ds\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|c:\\users\\hp\\source\\repos\\projeto-rotisseria\\projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F245F52E-DDC6-411F-A40D-09E5ED9CEF4F}|ProjetoGigiDede\\ProjetoGigiDede.csproj|solutionrelative:projetogigidede\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,77 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cadastro.cshtml",
-              "DocumentMoniker": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "ToolTip": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T11:43:55.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T11:43:28.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T11:41:14.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T11:40:50.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "login.css",
-              "DocumentMoniker": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "ToolTip": "C:\\Users\\2ds\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\login.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-04T11:40:34.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -112,6 +47,88 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwDgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-04T21:22:55.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-04T20:36:17.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "ProjetoGigiDede\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAIMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-04T20:34:17.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T20:33:06.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T20:27:57.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cadastro.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
+              "RelativeDocumentMoniker": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\projeto-rotisseria\\ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
+              "RelativeToolTip": "ProjetoGigiDede\\Views\\Home\\Cadastro.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T20:10:00.956Z",
+              "EditorCaption": ""
             }
           ]
         },
