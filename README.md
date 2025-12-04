@@ -1,4 +1,8 @@
 # ProjetoGigiDede --- ASP.NET Core MVC + MySQL
+
+Débora Lopes de Souza
+Giovanna Soares do Nascimento
+
 ## Visão Geral
 
 Projeto ASP.NET Core MVC voltado para cadastro de usuários com validação
@@ -19,28 +23,54 @@ GitHub* com seções claras, detalhadas e objetivas.
 Estrutura geral:
 
 ProjetoGigiDede/
-├── wwwroot/
-├── Controllers/
-│ └── HomeController.cs
-│ └── UsuarioController.cs
-├── Data/
-│ └── AppDbContext.cs
-├── Migrations/
-│ └── 20251204034833_initDB.cs
-│ └── AppDbContextModelSnapshot.cs
-├── Models/
-│ └── Usuario.cs
-├── Views/
-│ ├── Home/
-│ │ ├── Cadastro.cshtml/
-│ │ ├── Index.cshtml/
-│ │ ├── Login.cshtml/
-│ └── Shared/
-├── Data/
-│ └── AppDbContext.cs
-├── appsettings.json
-├── GlobalUsing.cs
-└── Program.cs
+├── .gitignore
+├── README.md
+├── ProjetoGigiDede.sln
+
+├── src/
+│   └── ProjetoGigiDede/
+│       ├── wwwroot/
+│       │   ├── css/
+│       │   ├── js/
+│       │   └── lib/
+
+│       ├── Controllers/
+│       │   ├── HomeController.cs
+│       │   └── UsuarioController.cs
+
+│       ├── Data/
+│       │   └── AppDbContext.cs
+
+│       ├── Migrations/
+│       │   ├── 20251204034833_initDB.cs
+│       │   └── AppDbContextModelSnapshot.cs
+
+│       ├── Models/
+│       │   └── Usuario.cs
+
+│       ├── Views/
+│       │   ├── Home/
+│       │   │   ├── Cadastro.cshtml
+│       │   │   ├── Index.cshtml
+│       │   │   └── Login.cshtml
+│       │   ├── Usuario/
+│       │   │   ├── Create.cshtml
+│       │   │   ├── Edit.cshtml
+│       │   │   ├── List.cshtml
+│       │   │   └── Details.cshtml
+│       │   └── Shared/
+│       │       ├── _Layout.cshtml
+│       │       ├── _ValidationScriptsPartial.cshtml
+│       │       └── _ViewImports.cshtml
+
+│       ├── GlobalUsing.cs
+│       ├── Program.cs
+│       └── appsettings.json
+
+└── tests/
+    └── ProjetoGigiDede.Tests/
+        ├── UsuarioTests.cs
+        └── HomeControllerTests.cs
 
 ------------------------------------------------------------------------
 
