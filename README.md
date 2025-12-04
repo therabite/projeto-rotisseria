@@ -1,7 +1,7 @@
 # ProjetoGigiDede --- ASP.NET Core MVC + MySQL
 
-Débora Lopes de Souza
-Giovanna Soares do Nascimento
+- Débora Lopes de Souza
+- Giovanna Soares do Nascimento
 
 ## Visão Geral
 
