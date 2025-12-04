@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoGigiDede")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31162654d02ee05efbf3b8580d285a3055f76d15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb18e2beaff28ee48674e8d61548f2bae0ca3c04")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoGigiDede")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoGigiDede")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

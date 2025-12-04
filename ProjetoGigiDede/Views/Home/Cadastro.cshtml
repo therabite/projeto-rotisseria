@@ -36,6 +36,7 @@
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="reset" class="btn btn-primary">Limpar</button>
                     <a href="register.html" class="btn btn-outline">Cadastrar</a>
                 </div>
             </form>
@@ -52,6 +53,27 @@
         if (!email || !pwd) { alert('Preencha email e senha.'); return; }
         alert('Login demo: ' + email);
         // TODO: call your auth API
+    loginForm.addEventListener('reset', function (e) {
+        // O evento 'reset' é disparado antes dos valores serem restaurados ao padrão,
+        // então usamos setTimeout para executar após o reset nativo ser aplicado.
+        setTimeout(() => {
+            // Limpa mensagens de validação customizadas (se existirem)
+            const validationMessages = loginForm.querySelectorAll('.text-danger, .error');
+            validationMessages.forEach(node => node.textContent = '');
+
+            // Remove classes de erro em campos (se seu CSS usar)
+            const errorFields = loginForm.querySelectorAll('.is-invalid, .input-error');
+            errorFields.forEach(f => f.classList.remove('is-invalid', 'input-error'));
+
+            // Opcional: limpar armazenamento local relacionado ao formulário (ex.: lembrar-me)
+            try {
+                localStorage.removeItem('login_remember_email');
+            } catch (err) { /* ignore */ }
+
+            // Foca o primeiro campo (email) após limpar
+            const firstField = loginForm.querySelector('input[name="email"]');
+            if (firstField) firstField.focus();
+        }, 0);
     });
 </script>
 
